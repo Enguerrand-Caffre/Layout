@@ -1,0 +1,13 @@
+body {
+  background-color: #eaf0ce;
+  color: #443850;
+  font-family: sans-serif;
+}
+
+h2 {
+  color: #7d8491;
+}
+
+.heritage h2 {
+  color: red
+}
