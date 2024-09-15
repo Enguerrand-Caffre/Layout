@@ -373,7 +373,17 @@ Unités relatives et absolues, nous disposons d’énormément d’unités en CS
 
 ---
 
+### Exercice sur les dimensions
+
+[Téléchargez ce projet](https://codeberg.org/shinze/Cours-EDD-2425/src/branch/main/Exercices%20et%20exemples/Taille) et suivez ce qui est demandé dans le fichier html.
+
+---
+
 ### Typographie
+
+Le module de typographie de CSS est un outil puissant permettant de contrôler tous les aspects d’un texte.
+
+`font-family, font-size, font-weight, line-height, letter-spacing, text-decoration, font-style, text-transform` pour ne citer que les principales fonctionnalités liées à la gestion de la typographie.
 
 ---
 
@@ -397,9 +407,11 @@ Unités relatives et absolues, nous disposons d’énormément d’unités en CS
 
 ## Références
 
+- [Un outil de conversion de couleurs](https://convertacolor.com/)
 - [CSS Diner, un jeu sur la sélection CSS](https://flukeout.github.io/);
 - [CSS Battle, si tu aimes jouer](https://cssbattle.dev/) pas le meilleur endroit pour apprendre les bonnes pratiques;
 - [Un document complet à propos des sélecteurs CSS (en)](https://selectors.sandroroth.com/);
-- [Un speedrun ?](https://css-speedrun.netlify.app/)
+- [Un speedrun ?](https://css-speedrun.netlify.app/);
+- [Des cours complet, (fr-ca)](https://smnarnold.com/cours/css)
 
 ---
