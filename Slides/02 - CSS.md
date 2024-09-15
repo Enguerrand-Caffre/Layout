@@ -138,7 +138,7 @@ Dans un nouveau projet, faites trois pages html et pour chacune essayez d’appl
 
 ---
 
-## Les sélecteurs basiques
+### Les sélecteurs basiques
 
 - Par nom d’élément (`body,p,h1,h2…,section`);
 - Par `class` (`.class`);
@@ -146,7 +146,7 @@ Dans un nouveau projet, faites trois pages html et pour chacune essayez d’appl
 
 ---
 
-## La sélection par nom d’élément
+### La sélection par nom d’élément
 
 ```css
 body {
@@ -163,7 +163,7 @@ p {
 
 ---
 
-## La sélection par `class`
+### La sélection par `class`
 
 ```css
 .big {
@@ -184,7 +184,7 @@ Permet de sélectionner des ensembles d’éléments portant un même attribut `
 
 ---
 
-## La sélection par `id`
+### La sélection par `id`
 
 ```css
 #header-logo { color: blue }
@@ -199,19 +199,9 @@ Permet de sélectionner des ensembles d’éléments portant un même attribut `
 
 ---
 
-## À propos de la sélection par `id`
+### À propos de la sélection par `id`
 
 La sélection par `id` est aujourd’hui considérée comme une **mauvaise pratique** mais s’utilise en JavaScript.
-
----
-
-<!-- _class: invert-->
-
-## Quand utiliser quel sélecteur ?
-
-- **Pas de sélection par `id` en CSS, sauf si vous avez plus de 35 ans**;
-- La sélection par élément (balise ou _tag_) est utilisée pour _initialiser_ des styles génériques sur des familles d’éléments. Régler la typographie sur tout un document, le fond de la page, apparence des liens;
-- La sélection par `class` sera votre alliée pour la vie;
 
 ---
 
@@ -267,6 +257,67 @@ L’aspect d’un élément est déterminé par plusieurs règles qui le concern
 
 Mettez en place le code de l’exemple qui suit dans un nouveau projet ou récupérez le code [proposé sur mon espace](https://codeberg.org/shinze/Cours-EDD-2425/src/branch/main/Exercices%20et%20exemples/Sp%C3%A9cifiti%C3%A9)
 
+https://developer.mozilla.org/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance
+
+---
+
+## La sélection hiérarchique
+
+```css
+/* Sélecteur descendant simples */
+
+/* p présents dans des sections */
+section p {color: orange}    
+
+/* .small présents dans des sections */
+section .small {color: blue}
+
+/*  */
+```
+
+---
+
+### D’autres sélecteurs
+
+```css
+/* Sélecteur universel (*), tout les éléments seront soulignés */
+* {text-decoration: underline}
+
+/* Regroupement, p et .small auront les mêmes règles */
+p, .small {font-family: serif}
+
+/* Sélecteur de class combiné, les éléments de type p avec une class small */
+p.small {color: green}
+
+/* Sélecteur d’état survolé */
+.item:hover {color: blue}
+
+/* Sélecteur de sélection :) */
+body::selection {background-color: yellow}
+```
+
+---
+
+<!-- _class: invert-->
+
+## Quand utiliser quel sélecteur ?
+
+Pour résumer, la sélection par élément et par class seront les modes que vous allez utiliser.
+
+- **Pas de sélection par `id` en CSS, sauf si vous avez plus de 35 ans**;
+- La sélection par élément (balise ou _tag_) est utilisée pour _initialiser_ des styles génériques sur des familles d’éléments. Régler la typographie sur tout un document, le fond de la page, apparence des liens;
+- La sélection par `class` sera votre alliée pour la vie;
+
+---
+
+### Quelques références sur la sélection en CSS
+
+- [Un cheatsheet interactif des sélecteurs CSS (en)](https://frontend30.com/css-selectors-cheatsheet/);
+- [Un autre cheatsheet (en)](https://devhints.io/css);
+- [Comment fonctionne la sélection CSS (en)](https://css-tricks.com/how-css-selectors-work/);
+- [Une liste complète des sélecteurs existants (en)](https://www.quackit.com/css/selectors/);
+- [CSS Diner, jeu de sélection en CSS (langues au choix)](https://flukeout.github.io/)
+
 ---
 
 <!-- _class: lead -->
@@ -275,7 +326,7 @@ Mettez en place le code de l’exemple qui suit dans un nouveau projet ou récup
 
 ---
 
-## Propriétés et valeurs
+### Propriétés et valeurs
 
 - Les couleurs, notation hexadécimales, `rgb, rgba, hsl, hsla…`;
 - Unités de mesure : `px, em, rem, %, vh, vw` ;
@@ -285,14 +336,55 @@ Mettez en place le code de l’exemple qui suit dans un nouveau projet ou récup
 
 ---
 
-## Couleurs
+### Couleurs
 
 Le web utilise un espace RVB (sRGB).
 
 Les couleurs peuvent se noter de différentes manières, avec des [couleurs nommées](https://developer.mozilla.org/en-US/docs/Web/CSS/named-color), en `#rrggbb, rgb, hsl, oklab, oklch, lab, oklab` et leur dérivées avec une valeur *alpha* (la transparence) `#rrggbbaa, rgba, hsla`.
 
+[Un petit exercice](https://codeberg.org/shinze/Cours-EDD-2425/src/branch/main/Exercices%20et%20exemples/Couleurs) ?
 
 ---
+
+### Unités de mesure
+
+Unités relatives et absolues, nous disposons d’énormément d’unités en CSS
+
+- Les unités *absolues* conserve leur dimension sans prendre en compte le contexte;
+- Les unités *relatives* sont dépendantes d’un autre élément, un élément parent, la dimension de la fenêtre.
+
+---
+
+### Unités absolues
+
+`q, mm, cm, in, pc, pt et px`, des dimensions ancrées dans le monde réel, immuable. Un centimètre sera toujours égal à lui-même.
+
+**Les unités absolues ne sont presque plus utilisées dans un contexte ou la  conception web *responsive*, oubliez les pixels**.
+
+
+[Une liste de ces unités](https://developer.mozilla.org/fr/docs/Learn/CSS/Building_blocks/Values_and_units#nombres_longueurs_et_pourcentages)
+
+---
+### Unités relatives 
+
+`em, ex, ch, rem, lh, vw, vh, vmin, vmax, %`, les dimensions relatives sont dépendantes d’un contexte, la taille d’un élément parent, de la fenêtre du navigateur. 
+
+**Même si ces valeurs semblent plus complexes, elles se révèlent être une réponse idéale quand on ne maîtrise pas la taille d’un écran, d’une fenêtre ou la taille d’une police**
+
+---
+
+### Typographie
+
+---
+
+### Bordures, marges et espacement
+
+---
+
+### *box model*, le modèle de boîte CSS
+
+---
+
 
 ## 🎡 Letz goooo
 

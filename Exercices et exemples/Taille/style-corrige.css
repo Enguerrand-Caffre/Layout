@@ -1,0 +1,31 @@
+/* Ne rien changer ici */
+
+section {
+  border: 2px #333 solid;
+}
+body > section {
+  margin-bottom: 2rem;
+}
+
+
+
+/* Votre code vient à ce niveau là */
+
+.one {
+  width: 50%;
+}
+
+.two {
+  width: 20rem;
+}
+
+
+.three {
+  width: 50vw
+}
+
+.four {
+  width: 20rem;
+  height: 20rem;
+  padding: 10%;
+}

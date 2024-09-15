@@ -1,0 +1,14 @@
+/* Ne rien changer ici */
+
+section {
+  border: 2px #333 solid;
+}
+body > section {
+  margin-bottom: 2rem;
+}
+
+
+
+/* Votre code vient à ce niveau là */
+
+
