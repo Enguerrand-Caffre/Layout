@@ -53,9 +53,9 @@
 
 
 section.lead {
-  --bg-color: var(--ctp-latte-mauve);
-  --title-color: var(--ctp-latte-rosewater);
-  --meta-color: var(--ctp-latte-rosewater);
+  --bg-color: var(--ctp-latte-flamingo);
+  --title-color: var(--ctp-latte-base);
+  --meta-color: var(--ctp-latte-base);
   --h1-size: 3rem;
   --section-deco: var(--ctp-latte-rosewater);
   --text: var(--ctp-latte-mantle);
@@ -63,10 +63,15 @@ section.lead {
 }
 
 section.alt {
-  --title-color: var(--ctp-latte-flamingo);
-  --meta-color: #dc8a78;
+  --bg-color: var(--ctp-latte-text);
+  --title-color: var(--ctp-latte-base);
+  --meta-color: var(--ctp-latte-base);
   --h1-size: 3rem;
-  --section-deco: #e64553;
+  --section-deco: var(--ctp-latte-rosewater);
+  --text: var(--ctp-latte-mantle);
+  --accent1: var(--ctp-latte-mantle);
+  --body-color: red;
+  --accent: var(--ctp-latte-flamingo);
 }
 
 section.invert {
@@ -75,9 +80,12 @@ section.invert {
   --meta-color: var(--ctp-latte-pink);
   --text: var(--ctp-latte-mantle);
   --title-color: var(--ctp-latte-pink);
+  --accent1: var(--ctp-latte-flamingo);
   --body-color: red;
   --h2-size: 2rem;
+  --accent: var(--ctp-latte-flamingo);
 }
+
 
 a {
   color: var(--accent);
@@ -97,18 +105,18 @@ section {
 
 code {
   font-family: var(--font-code);
-  background: var(--highlight-bg);
-  font-weight: normal !important;
-
 }
 
 pre {
   line-height: 1.3;
+  font-size: .7rem;
   tab-size: 2;
   border-color: var(--highlight-border);
   background: var(--highlight-bg);
   color: var(--highlight-color);
 }
+
+
 
 b,
 strong {
@@ -176,7 +184,7 @@ ul li::marker, ol li::marker {
 }
 
 ol li::marker  {
-  color: var(--accent);
+  
 }
 
 ul li::marker {
@@ -231,7 +239,7 @@ marp-pre:has(code[class*="language-css"])::before {content: "css"}
 
 /* light (default) theme */
 :root {
-  --highlight-bg: white;
+  --highlight-bg: transparent;
   --highlight-border: var(--ctp-latte-overlay0);
   --highlight-color: var(--ctp-latte-text);
   --highlight-comment: var(--ctp-latte-lavender);
@@ -247,8 +255,9 @@ marp-pre:has(code[class*="language-css"])::before {content: "css"}
 }
 
 /* dark theme */
-html.dark {
-  --highlight-bg: #1c1b1b;
+
+section.invert, section.alt {
+  --highlight-bg: transparent;
   --highlight-color: #ffffff;
   --highlight-comment: #999999;
   --highlight-keyword: #88aece;

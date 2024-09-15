@@ -17,13 +17,26 @@ footer: "Gaëtan Ark / EDD 2024-25"
 
 ## Rôle de CSS
 
-CSS définit l’apparence des éléments d’un contenu web.
+Définir l’apparence des éléments d’une page web
 
-- **Découplage** : HTML gère le contenu, CSS l’apparence ([Participez au CSS Naked Day](https://css-naked-day.github.io/));
-- **Maintenabilité** : Une seule page HTML peut avoir des formes visuelles très différentes ([CSS Zen Garden](https://csszengarden.com/tr/fr/218/));
-- **Ré-utilisabilité** : un seul document CSS permet de gérer toutes les pages d’un site mais aussi d’autres sites.
+---
 
-CSS est un standard et peu donc être utilisé sur une large palette de _devices_.
+## Les outils que l’on va utiliser
+
+- [Comment activer l’inspecteur dans Safari](https://webkit.org/web-inspector/enabling-web-inspector/);
+- [Comment fonctionne l’inspecteur de Firefox](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/open_the_inspector/index.html);
+- [Chrome *devtools*](https://developer.chrome.com/docs/devtools);
+- [Web Developper](https://chrispederick.com/work/web-developer/), un ensemble d’outils pour la conception web;
+- [Visbug pour Chrome](https://chromewebstore.google.com/detail/visbug/cdockenadnadldjbbgcallicgledbeoc?hl=en&pli=1), [Visbug pour Firefox](https://addons.mozilla.org/en-US/firefox/addon/visbug/) et [même pour Safari](https://apps.apple.com/us/app/visbug/id1538509686?mt=12)
+
+---
+
+## Les avantages
+
+- **Découplage** : HTML gère le contenu, CSS l’apparence;
+- **Maintenabilité** : Une seule page HTML peut avoir des [formes visuelles différentes](https://csszengarden.com/tr/fr/218/);
+- **Ré-utilisabilité** : un seul document CSS permet de gérer toutes les pages d’un site mais aussi d’autres sites;
+- Standard et utilisable sur une large palette de _devices_.
 
 ---
 
@@ -35,20 +48,32 @@ selecteur {
 }
 ```
 
-- **Sélecteur**, les éléments HTML sur lesquels les styles s’appliquent;
+- **Sélecteur**, les éléments HTML sur lesquels les déclarations s’appliquent;
 - **Propriété**, caractéristique visuelle (la police, la couleur du text, le fond…);
 - **Valeur**, la configuration de la propriété, par exemple `serif`, `red`, `#cacaca`;
 - La propriété et la valeur sont séparées par un `:`.
 
+Cet ensemble se nomme un *bloc de déclarations*.
+
 ---
 
-## Syntaxe, détails
+<!-- _class: alt -->
+
+## Syntaxe, déclarations, commentaires
 
 ```css
+/*
+	Chaque bloc de déclarations
+	commence par { et se finit par }
+*/
+
 p {
-  /* Chaque ligne est séparée par un `;` */
+  /* Chaque déclaration est séparée par un `;` */
   color: blue;
   font-weight: bold;
+}
+.selecteur {
+  color: #fc0;
 }
 ```
 
@@ -56,15 +81,15 @@ p {
 
 ## Et comment l’utiliser ?
 
-1. CSS externes dans un fichier lié au document `html`;
-2. CSS _inline_;
-3. CSS _internes_.
+1. Styles externes dans un fichier lié au document `html`;
+2. Styles _inline_;
+3. Styles _internes_.
 
 ---
 
-## Comme fichier externe
+## Fichier de styles externes
 
-Pratique idéale, permet de bien séparer le contenu et l’aspect visuel et de utiliser un seul document CSS pour plusieurs pages.
+Pratique idéale, permet de séparer le contenu et l’aspect visuel et d’utiliser un seul document CSS pour plusieurs pages.
 
 ```html
 <head>
@@ -171,19 +196,33 @@ Permet de sélectionner des ensembles d’éléments portant un même attribut `
 <h2 id="header-logo">Logo entête</h2>
 <h2 id="footer-logo">Logo pied de page</h2>
 ```
+
 ---
 
 ## À propos de la sélection par `id`
 
-La sélection par `id` est aujourd’hui considérée comme une **mauvaise pratique** mais est parfois utilisée en JavaScript.
+La sélection par `id` est aujourd’hui considérée comme une **mauvaise pratique** mais s’utilise en JavaScript.
 
 ---
+
+<!-- _class: invert-->
 
 ## Quand utiliser quel sélecteur ?
 
 - **Pas de sélection par `id` en CSS, sauf si vous avez plus de 35 ans**;
+- La sélection par élément (balise ou _tag_) est utilisée pour _initialiser_ des styles génériques sur des familles d’éléments. Régler la typographie sur tout un document, le fond de la page, apparence des liens;
 - La sélection par `class` sera votre alliée pour la vie;
-- La sélection par élément (balise ou _tag_) est utilisée pour _initialiser_ des styles génériques sur des familles d’éléments;
+
+---
+
+## Organisation d’un fichier CSS
+
+Sur les projets que l’on abordera ensemble, un seul fichier CSS sera suffisant pour tout un projet (et c’est le cas aussi dans le monde réel).
+
+**Le fichier est organisé selon deux grands niveaux **
+
+1. Le début du fichier contient des styles génériques qui s’appliquent à une large sélection d’éléments;
+2. Les éléments plus spécifiques, les composants et sous-composants qui font votre interface.
 
 ---
 
@@ -216,17 +255,17 @@ Le second paragraphe aura une couleur orange dont il _hérite_ de son parent l�
 
 ## 🌊 Cascade, le _C_ de CSS
 
-L’aspect d’un élément est déterminé par plusieurs règles qui le concernent : 
+L’aspect d’un élément est déterminé par plusieurs règles qui le concernent :
 
 - Spécificité (force) des sélecteurs ou héritages;
-- L’ordre d’apparence de ces règles;
-- L’importance forcée (`!important`);
+- L’ordre d’apparence des règles qui le concernent;
+- L’importance forcée (`!important`, **mauvaise pratique**);
 
 ---
 
 ## Cascadons
 
-Dans l’exemple qui suit, décrivez l’apparence du texte qui dit «Bonjour».
+Mettez en place le code de l’exemple qui suit dans un nouveau projet.
 
 ---
 
@@ -240,10 +279,24 @@ Dans l’exemple qui suit, décrivez l’apparence du texte qui dit «Bonjour».
 
 ```css
 body { font-family: Inter, sans-serif }
-section { font-family: serif }
+body { font-family: Monospaced }
+section { font-size: 2rem }
 h2 { color: blue }
 .small { font-size: 1rem }
 ```
+
+
+---
+
+## Commentaire ligne à ligne de l’exemple
+
+1. Le premier sélecteur applique une police au `body`, tous les éléments vont hériter de cette police;
+2. Une seconde déclaration s’appliquant au `body` change à nouveau la police pour tous les éléments;
+3. Le sélecteur applique une taille de police à la section;
+4. Tous les `h2` sont bleus, y compris celui qui est dans la section;
+5. La taille de la police des éléments qui portent une  `class="small"` sera de `1rem`.
+
+Le texte sera bleu, avec une police *mono* et un taille de police de 1rem (calculé au final à 16 pixels).
 
 ---
 

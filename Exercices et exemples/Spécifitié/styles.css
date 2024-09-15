@@ -1,0 +1,76 @@
+/*
+  Exemple de spécificité (calcul de l’importance
+  des déclarations CSS
+
+  Cet exemple ne devrait pas exister tel quel.
+  Il faut imaginer que le code que vous voyez peut être issu
+  de différents fichiers ou peut être présent dans un fichier
+  avec des centaines voire milliers de lignes de code.
+
+*/
+
+
+/* 
+  1. On applique une police à tous les éléments de la page
+  ( Ici certains éléments ne vont pas hériter de la police, notamment 
+  les éléments de formulaire et les boutons par exemple )
+  2. Le fond de page sera jaune.
+
+*/
+body {
+  font-family: Inter, sans-serif;
+  background-color: yellow;
+}
+
+
+/* 
+  3. On applique à nouveau une police aux éléments de la page
+  Cette déclaration va prendre le dessus car c’est la dernière 
+  sur le sélecteur body, en revanche seule la propriété font-family
+  sera modifiée, la couleur de fond sera conservée.
+
+  */
+body {
+  font-family: Monospaced;
+}
+
+
+/*
+  4. Le corps utilisé sera de 2rem pour tous les éléments
+  de la section
+*/
+
+section {
+  font-size: 2rem;
+}
+
+/* 
+  5. Tous les h2 seront de couleur bleue, y compris les h2
+  présents dans la section
+ */
+
+h2 {
+  color: blue;
+}
+
+/*
+  6. Le texte des éléments avec une class small aura un corps
+  de 1rem, 16 pixels calculés.
+
+  Le rem est une unité de dimension qui prend comme référence
+  la taille de la police du body. La taille de police du body est de 16 px
+  par défaut, 1rem est donc égal à 16 px.
+
+  En apprendre plus sur les unités de dimension
+  https://shinze.com/standards-web/css/05-les-unites-de-dimension/
+*/
+
+.small {
+  font-size: 1rem;
+}
+
+
+/*
+  Pour conclure, cet élément (le h2 de la section) sera bleu,
+  avec une police monospaced et un corps de 16 pixels.
+*/
