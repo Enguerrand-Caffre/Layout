@@ -1,0 +1,23 @@
+body {
+  background-color: rgb(226, 255, 215);
+}
+
+.title {
+  color: #ffff00;
+}
+
+.subtitle {
+  background-color: salmon;
+}
+
+.embed {
+  color: orange
+}
+
+.embed a {
+  color: inherit
+}
+
+.test {
+  background-color: hsla(188, 100%, 76%, 0.5);
+}

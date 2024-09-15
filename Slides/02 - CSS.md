@@ -265,38 +265,32 @@ L’aspect d’un élément est déterminé par plusieurs règles qui le concern
 
 ## Cascadons
 
-Mettez en place le code de l’exemple qui suit dans un nouveau projet.
+Mettez en place le code de l’exemple qui suit dans un nouveau projet ou récupérez le code [proposé sur mon espace](https://codeberg.org/shinze/Cours-EDD-2425/src/branch/main/Exercices%20et%20exemples/Sp%C3%A9cifiti%C3%A9)
 
 ---
 
-```html
-<body>
-  <section>
-    <h2 class="small">Bonjour</h2>
-  </section>
-</body>
-```
+<!-- _class: lead -->
 
-```css
-body { font-family: Inter, sans-serif }
-body { font-family: Monospaced }
-section { font-size: 2rem }
-h2 { color: blue }
-.small { font-size: 1rem }
-```
-
+## Propriétés, valeurs, box model
 
 ---
 
-## Commentaire ligne à ligne de l’exemple
+## Propriétés et valeurs
 
-1. Le premier sélecteur applique une police au `body`, tous les éléments vont hériter de cette police;
-2. Une seconde déclaration s’appliquant au `body` change à nouveau la police pour tous les éléments;
-3. Le sélecteur applique une taille de police à la section;
-4. Tous les `h2` sont bleus, y compris celui qui est dans la section;
-5. La taille de la police des éléments qui portent une  `class="small"` sera de `1rem`.
+- Les couleurs, notation hexadécimales, `rgb, rgba, hsl, hsla…`;
+- Unités de mesure : `px, em, rem, %, vh, vw` ;
+- Typographie : `font-family, font-size, font-weight, line-height`;
+- Les bordures, marges et espacements (`padding, margin, border`);
+- Box model pour les * noobs*;
 
-Le texte sera bleu, avec une police *mono* et un taille de police de 1rem (calculé au final à 16 pixels).
+---
+
+## Couleurs
+
+Le web utilise un espace RVB (sRGB).
+
+Les couleurs peuvent se noter de différentes manières, avec des [couleurs nommées](https://developer.mozilla.org/en-US/docs/Web/CSS/named-color), en `#rrggbb, rgb, hsl, oklab, oklch, lab, oklab` et leur dérivées avec une valeur *alpha* (la transparence) `#rrggbbaa, rgba, hsla`.
+
 
 ---
 
