@@ -396,6 +396,8 @@ Le module de typographie de CSS est un outil puissant permettant de contrôler t
 - `border` , la bordure physique d’un élément;
 - `outline` une bordure alternative, non physique.
 
+
+
 ---
 
 ### Exercices bordure et marges

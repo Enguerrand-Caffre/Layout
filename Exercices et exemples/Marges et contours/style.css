@@ -2,6 +2,9 @@
 
 Les bordures
 --------------
+Deux propriétés peuvent être utilisées, border et outline.
+Border a une présence physique, outline non (c’est à tester pour comprendre)
+Les deux propriétés ont la même syntaxe.
 
 Exemple d’un contour rouge d’une dimension de 0,25 rem de couleur rouge
 et de style plein
