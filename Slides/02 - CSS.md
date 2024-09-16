@@ -383,15 +383,30 @@ Unités relatives et absolues, nous disposons d’énormément d’unités en CS
 
 Le module de typographie de CSS est un outil puissant permettant de contrôler tous les aspects d’un texte.
 
-`font-family, font-size, font-weight, line-height, letter-spacing, text-decoration, font-style, text-transform` pour ne citer que les principales fonctionnalités liées à la gestion de la typographie.
+`font-family, font-size, font-weight, line-height, letter-spacing, text-decoration, font-style, font-variant text-transform` pour ne citer que les principales fonctionnalités liées à la gestion de la typographie.
+
+[Essayons-en quelques-une](https://codeberg.org/shinze/Cours-EDD-2425/src/branch/main/Exercices%20et%20exemples/Polices). Téléchargez ce projet et suivez ce qui est demandé dans le document HTML
 
 ---
 
 ### Bordures, marges et espacement
 
+- `margin`, la marge autour d’un élément;
+- `padding` représente la marge interne à un élément;
+- `border` , la bordure physique d’un élément;
+- `outline` une bordure alternative, non physique.
+
+---
+
+### Exercices bordure et marges
+
+
+
 ---
 
 ### *box model*, le modèle de boîte CSS
+
+
 
 ---
 

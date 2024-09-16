@@ -1,0 +1,67 @@
+/* Ne pas modifier */
+*:not(dialog),*:after,*:before {
+  margin: 0;
+  padding: 0;
+}
+
+dialog {
+  padding: 0;  
+}
+
+.link, .button {
+  font-family: inherit;
+  line-height: 1;
+  text-decoration: none;
+  appearance: none;
+}
+
+
+/* Votre code vient après ce commentaire */
+
+body {
+  margin: 2rem;
+  font-family: sans-serif;
+}
+
+p, ul, ol, h2 {
+  margin-bottom: 1rem;
+}
+
+ul,ol {
+  padding-left: 2rem;
+}
+
+h1, section {
+  margin-bottom: 2rem;
+}
+
+
+
+
+
+.diamond {
+  border: 2rem grey groove;
+  padding: 1rem;
+}
+
+.first-image, .second-image {
+  border-radius: 50%;
+}
+
+
+.zyrcon {
+  border-left: 2rem blue solid;
+  padding-left: 2rem;
+}
+
+.link, .button {
+  border: 0;
+  border-radius: 2rem;
+  font-size: 1rem;
+  background-color: hotpink;
+  padding: 1rem 2rem; 
+}
+
+.link:hover, .button:hover {
+  background-color: orange;
+}

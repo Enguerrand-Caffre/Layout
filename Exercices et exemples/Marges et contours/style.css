@@ -1,0 +1,68 @@
+/*
+
+Les bordures
+--------------
+
+Exemple d’un contour rouge d’une dimension de 0,25 rem de couleur rouge
+et de style plein
+border: .25rem solid red;
+
+Les styles de contour peuvent être :
++ solid, un contour plein;
++ dashed, un contour interrompu;
++ dotted, un contour fait de points;
++ inset et outset, effet 3D des 90’s
++ groove :)
+
+La couleur et la dimension prennent des valeurs standards.
+
+Un contour peut s’appliquer à un seul côté (top, right, bottom et left)
+border-left: 1rem inset blue
+
+Un contour peut être arrondi et peut permettre de faire une forme complètement ronde
+border-radius: 1rem;
+border-radius: 50%;
+
+Les marges
+--------------
+
+Il existe des marges internes (padding) et des marges externes (margin)
+La syntaxe entre margin et padding est similaire, les deux propriétés
+fonctionnent de la même manière.
+
+En indiquant une seule valeur la marge s’applique à tous les côtés
+Dans cet exemple, l’élément à une marge interne de 1rem
+padding: 1rem;
+
+La marge de chaque côté peut aussi être indiqué de cette manière,
+on commence par le top pour finir par le left en suivant la rotation
+des aiguilles d’une montre. (top right bottom left)
+
+padding: 1rem 2rem 3rem 1rem;
+
+On peut aussi modifier ces propriétés de manière individuelles
+
+margin-right: 2rem
+
+*/
+
+/* Ne pas modifier */
+*:not(dialog),*:after,*:before {
+  margin: 0;
+  padding: 0;
+}
+
+dialog {
+  padding: 0;  
+}
+
+.link, .button {
+  font-family: inherit;
+  line-height: 1;
+  text-decoration: none;
+  appearance: none;
+}
+
+/* Votre code vient après ce commentaire */
+
+

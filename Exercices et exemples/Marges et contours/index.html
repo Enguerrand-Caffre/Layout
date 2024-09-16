@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercice de couleurs</title>
+  <link rel="stylesheet" href="style-corrige.css">
+</head>
+<body>
+
+  <h1>Pratiquons les contours et les marges</h1>
+
+  <p>Essayez de mettre de la marge entre les différents éléments
+    qui composent cette page pour la rendre plus digeste.</p>
+
+  <p>Appliquez une police sans serif au document.</p>
+
+  <section class="diamond">
+    <h2>Les contours peuvent être très originaux</h2>
+    <ol>
+      <li>Appliquez un contour gris à cet élément;</li>
+      <li>Appliquez une marge interne de 1rem.</li>
+      <li>Donnez un style <em>groove</em> à mon contour</li>
+    </ol>
+  </section>
+
+  <section class="ruby">
+    <h2>Faisons des ronds</h2>
+    <p>Essayez de faire de telle manière que ces images soient rondes.</p>
+    <img src="https://imageplaceholder.net/100x400" alt="" class="first-image">
+    <img src="https://imageplaceholder.net/100x100" alt="" class="second-image">
+  </section>
+
+  <section class="zyrcon">
+    <h2>Des boutons</h2>
+    <p>Ajoutez un contour bleu à la gauche de cette section ainsi qu’une marge interne pour que le contenu ne soit pas collé.</p>
+    <p>Faîtes de ces deux éléments des boutons avec un aspect de pilule, vous pouvez même ajouter un style au survol</p>
+    <a href="https://theuselessweb.com/" class="link">C’est parti !</a>
+    <button class="button" id="show">Non, c’est parti</button>
+
+    <dialog close>
+      <h2>Salutations, à tous et à toutes !</h2>
+      <p>Ajoutez un peu de padding à ce toutou, il étouffe</p>
+      <img src="https://i.giphy.com/1d7F9xyq6j7C1ojbC5.webp" alt="Un gif bien rigolo">
+      <form method="dialog">
+        <button class="button">Super</button>
+      </form>
+    </dialog>
+
+  </section>
+
+
+  <script>
+    const dialog = document.querySelector("dialog");
+    const showButton = document.querySelector("#show");
+    const closeButton = document.querySelector("dialog button");
+
+    // Le bouton "Afficher la fenêtre" ouvre le dialogue
+    showButton.addEventListener("click", () => {
+      dialog.showModal();
+    });
+
+    // Le bouton "Fermer" ferme le dialogue
+    closeButton.addEventListener("click", () => {
+      dialog.close();
+    });
+
+  </script>
+</body>
+</html>
