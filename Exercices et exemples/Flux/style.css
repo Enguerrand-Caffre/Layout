@@ -1,0 +1,21 @@
+body {
+  font-family: sans-serif;
+}
+
+span, a, code {
+  outline: .125rem hotpink solid;
+  background-color: #fff;
+  padding: .125rem;
+  border-radius: .25rem;
+}
+
+p, h1, h2, h3 {
+  outline: .125rem teal solid;
+  background-color: rgba(211, 255, 254, 0.598);
+  padding: .5rem;
+}
+
+
+h1 {
+  background-color: #beff74;
+}

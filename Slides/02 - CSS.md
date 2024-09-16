@@ -209,10 +209,10 @@ La sélection par `id` est aujourd’hui considérée comme une **mauvaise prati
 
 Sur les projets que l’on abordera ensemble, un seul fichier CSS sera suffisant pour tout un projet (et c’est le cas aussi dans le monde réel).
 
-**Le fichier est organisé selon deux grands niveaux **
+**‌ Le fichier est organisé selon deux grands niveaux**
 
 1. Le début du fichier contient des styles génériques qui s’appliquent à une large sélection d’éléments;
-2. Les éléments plus spécifiques, les composants et sous-composants qui font votre interface.
+2. Ensuite les éléments plus spécifiques, les composants et sous-composants qui font votre interface.
 
 ---
 
@@ -220,7 +220,14 @@ Sur les projets que l’on abordera ensemble, un seul fichier CSS sera suffisant
 
 Principe par lequel des propriétés sont naturellement **_transmises_** d’un élément parent vers un élément enfant.
 
-Des propriétés sont _héritables_, comme la couleur du texte, l’interlignage, l’inter-lettrage et d’autres ne seront jamais héritées (marges, fonds).
+- Des propriétés se propagent, comme la couleur du texte, l’interlignage, l’inter-lettrage et d’autres ne seront jamais héritées par défaut (marges, fonds);
+- Les liens et les formulaires n’héritent pas d’autant de propriétés que les autres éléments (police pour les formulaire et couleur pour les liens.)
+
+```css
+/* Pour forcer l’héritage */
+a {color: inherit}
+input {font-family: inherit}
+```
 
 ---
 
@@ -272,7 +279,8 @@ section p {color: orange}
 /* .small présents dans des sections */
 section .small {color: blue}
 
-/*  */
+/* Les h2 enfants directs de body */
+body > h2 { color: red }
 ```
 
 ---
@@ -396,29 +404,39 @@ Le module de typographie de CSS est un outil puissant permettant de contrôler t
 - `border` , la bordure physique d’un élément;
 - `outline` une bordure alternative, non physique.
 
-
-
----
-
-### Exercices bordure et marges
-
-
+[Un petit exercice](https://codeberg.org/shinze/Cours-EDD-2425/src/branch/main/Exercices%20et%20exemples/Marges%20et%20contours) pour tester ces propriétés.
 
 ---
 
 ### *box model*, le modèle de boîte CSS
 
+En CSS tout est une boîte. Mais elle a un fonctionnement qu’il faut connaître.
+**Un fois rendue à l’écran quelle est la largeur de cette boîte en pixels ?**
 
+```css
+.la-boite {
+	width: 20rem;
+	height: 20rem;
+	margin: 1rem;
+	padding: 1rem;
+	border: 2rem dashed solid;
+}
+```
 
 ---
 
+### Réponse
 
-## 🎡 Letz goooo
+**416 pixels**  = 20rem + (2 × 1rem) + (2 × 2rem)
+La largeur + (padding gauche + droite)  + (border gauche + droite)
 
-1. Nouveau projet;
-2. Une fiche d’identité présentant les informations suivantes : Nom, prénom, photo, rôle, nom de l’entreprise, un lien de contact;
+Intuitif ? Pour mieux gérer cet aspect du langage il existe un propriété `box-sizing`.
 
-- [La maquette, sur Figma](https://www.figma.com/design/wXZtKEBG4Ka3v6GFI9m7lr/Untitled?node-id=0-1&t=t8E9SKFFiZTPT0K3-1)
+```css
+*,*:after,*:before {
+	box-sizing: border-box
+}
+```
 
 ---
 
