@@ -1,0 +1,36 @@
+*,*::after,*::before {
+  box-sizing: border-box;
+}
+
+body {
+  color: #333;
+  font-family: sans-serif;
+}
+
+code {
+  background-color: rgb(205, 255, 217);
+  padding: 1rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+[class^="sample"] {
+  background-color: #feffcb;
+  outline: 1px rgba(0, 0, 0, 0.2) solid;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-bottom: 3rem;
+  min-height: 10rem
+}
+
+.bloc {
+  background-color: #ffdd4449;
+  outline: 1px rgba(170, 92, 13, 0.258) solid;
+  border-radius: .5rem;
+  padding: 1rem;
+}
+
+.sample3 .bloc {
+  width: 20rem;
+  flex-shrink: 0;
+}

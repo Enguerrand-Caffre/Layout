@@ -1,0 +1,27 @@
+.sample1 {
+  display: flex;
+}
+
+.sample2 {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.sample3 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.sample4 {
+  display: flex;
+  justify-content: center;
+}
+
+.sample5 {
+  display: flex;
+}
+
+.sample5 .bloc {  
+  flex-grow: 1
+}
+

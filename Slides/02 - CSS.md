@@ -318,6 +318,29 @@ Pour résumer, la sélection par élément et par class seront les modes que vou
 
 ---
 
+## Exemple simple
+
+![bg left:45% w:500](Naming.png)
+
+```css
+button {
+	border: 0;
+	border-radius: 3rem;
+}
+.icons {
+	width: 1rem;
+	height: 1rem;
+}
+.validate {
+	color: white;
+	background-color: #7EA9FF;
+}
+.validate-icon {}
+.validate-label {}
+```
+
+---
+
 ### Quelques références sur la sélection en CSS
 
 - [Un cheatsheet interactif des sélecteurs CSS (en)](https://frontend30.com/css-selectors-cheatsheet/);
@@ -350,7 +373,8 @@ Le web utilise un espace RVB (sRGB).
 
 Les couleurs peuvent se noter de différentes manières, avec des [couleurs nommées](https://developer.mozilla.org/en-US/docs/Web/CSS/named-color), en `#rrggbb, rgb, hsl, oklab, oklch, lab, oklab` et leur dérivées avec une valeur *alpha* (la transparence) `#rrggbbaa, rgba, hsla`.
 
-[Un petit exercice](https://codeberg.org/shinze/Cours-EDD-2425/src/branch/main/Exercices%20et%20exemples/Couleurs) ?
+- [Un petit exercice](https://codeberg.org/shinze/Cours-EDD-2425/src/branch/main/Exercices%20et%20exemples/Couleurs) ?
+- **[Un guide complet sur les couleurs en CSS](https://www.joshwcomeau.com/css/color-formats/)**
 
 ---
 
@@ -448,5 +472,6 @@ Intuitif ? Pour mieux gérer cet aspect du langage il existe un propriété `b
 - [Un document complet à propos des sélecteurs CSS (en)](https://selectors.sandroroth.com/);
 - [Un speedrun ?](https://css-speedrun.netlify.app/);
 - [Des cours complet, (fr-ca)](https://smnarnold.com/cours/css)
-
+- [À lire et à relire (en)](https://www.joshwcomeau.com/css/);
+- [À propos de pixels](https://www.joshwcomeau.com/css/surprising-truth-about-pixels-and-accessibility/)
 ---
