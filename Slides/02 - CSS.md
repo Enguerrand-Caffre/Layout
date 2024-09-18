@@ -187,14 +187,14 @@ Permet de sélectionner des ensembles d’éléments portant un même attribut `
 ### La sélection par `id`
 
 ```css
-#header-logo { color: blue }
-#footer-logo { color: orange }
+#header-brand-name { color: blue }
+#footer-brand-name { color: orange }
 ```
 
 ```html
 <!-- L’id est unique : un seul élément avec un même id par page -->
-<h2 id="header-logo">Logo entête</h2>
-<h2 id="footer-logo">Logo pied de page</h2>
+<h2 id="header-brand-name">Les éditions Bonobo</h2>
+<h2 id="footer-brand-name">Les éditions Bonobo</h2>
 ```
 
 ---
